@@ -21,11 +21,11 @@ state_change = zeros(size(state_local_n));
 damn = 0;
 action_steps = 0;
 
-max_static = 1000;
+max_static = 100;
 
 while action_steps < inf
  
-    n_steps = n_steps + 1
+    n_steps = n_steps + 1;
  
     state_local = state_local_n;
  

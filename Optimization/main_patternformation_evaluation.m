@@ -21,7 +21,7 @@ save_dataset = 0; % Save dataset 1=yes. 0=no.
 %% Load evolutions phase 2
 color = {[0 0 0],[1 0 0],[0 0.5 0],[0 0 1],[1 0.5 0],[0.75, 0, 0.75]};
 linestyle = {'-','--',':','-.'};
-n_agents_vect = [5 10 20];
+n_agents_vect = [20];
 
 evo_p = cell(n,1);
 for i = 1:n
