@@ -1,25 +1,31 @@
 function L = hexagon_lattice()
 % hexagon outputs the set of desired states Sdes for the following pattern
-%     o
-% o   x   o      8  1  2
-%   x   x        7  o  3
-%   x   x        6  5  4
-% o   x   o
-%     o 
-%   
+%
+%    6   1 
+%     \ / 
+%  5---o---2
+%     / \  
+%    4   3
 %
 % The pattern uses 6 agents and has 6 states in Sdes.
 %
 % Mario Coppola, 2018
 
-%   1
-%   x
-% 6   4
-L(1, :) = [1 0 0 1 0 1 0 0];
 
-% 8   2
-%   x 
-%   5
-L(2, :) = [0 1 0 0 1 0 0 1];
+s{1} = [1 3 5]
+s{2} = [2 6 4]
+
+s{3} = [2 4]
+s{4} = [3 5]
+s{5} = [1 3]
+s{6} = [4 6]
+s{7} = [2 6]
+s{8} = [1 5]
+
+L = zeros(numel(s),6)
+
+for i = 1:size(L,1)
+	L(i,s{i}) = 1;
+end
 
 end

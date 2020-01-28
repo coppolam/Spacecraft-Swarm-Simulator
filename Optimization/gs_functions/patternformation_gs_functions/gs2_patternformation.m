@@ -13,6 +13,7 @@ gs2r = [];
 
 p = find(link_list(s, :) == 1);
 start_state_bin = link_list(s, :);
+actionrange = [1 size(link_list,2)];
 for i = 1:numel(p)
     if ~ check_iseven(p(i)) % p is odd
         jlim = [-2 -1 1 2];
@@ -22,17 +23,17 @@ for i = 1:numel(p)
     
     % The neighbor moves away from the neighborhood
     for j = jlim
-        if start_state_bin(wraptosequence(p(i) + j, [1 8])) == 0
+        if start_state_bin(wraptosequence(p(i) + j, actionrange)) == 0
             newlink = start_state_bin;
             newlink(p(i)) = 0;
-            newlink(wraptosequence(p(i) + j, [1 8])) = 1;
+            newlink(wraptosequence(p(i) + j, actionrange)) = 1;
             newlink = get_local_state_id(newlink);
             gs2 = [gs2 newlink];
         end
     end
     
     % The neighbor stays in the neighborhood
-    if start_state_bin(wraptosequence(p(i) - 1, [1 8])) == 1 || start_state_bin(wraptosequence(p(i) + 1, [1 8])) == 1
+    if start_state_bin(wraptosequence(p(i) - 1, actionrange)) == 1 || start_state_bin(wraptosequence(p(i) + 1, actionrange)) == 1
         newlink = start_state_bin;
         newlink(p(i)) = 0;
         newlink = get_local_state_id(newlink);

@@ -3,7 +3,7 @@ function plot_actions(Qrow)
 % 
 % Mario Coppola, 2018
 
-pp = statespace_grid;
+pp = statespace_hex_grid;
 actions = find(Qrow>0); % Get the valid actions from the policy
 if ~isempty(actions)
     for k = 1:length(actions)

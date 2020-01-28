@@ -21,13 +21,14 @@ save_dataset = 0; % Save dataset 1=yes. 0=no.
 %% Load evolutions phase 2
 color = {[0 0 0],[1 0 0],[0 0.5 0],[0 0 1],[1 0.5 0],[0.75, 0, 0.75]};
 linestyle = {'-','--',':','-.'};
-n_agents_vect = [20];
+n_agents_vect = 50;
 
+i = 4643;
 evo_p = cell(n,1);
-for i = 1:n
+% for i = 1:n
     fprintf('Reading log %d \n',i);
-    evo_p{i} = load([folder,'evolutions/',pattern_name,'_',num2str(i),'.mat'],'population_history_p','Q2','s');
-end
+    evo_p{1} = load([folder,'',pattern_name,'_',num2str(i),'.mat'],'population_history_p','Q2','s');
+% end
 fprintf('Done reading\n')
 
 %% Plot evolutions

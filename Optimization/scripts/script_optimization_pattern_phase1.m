@@ -18,7 +18,7 @@ s.simplicial = find_simplicial(s.link_list(1:end - 1, :));
 s.static_0 = s.states(~ any(Q0t, 2));
 
 % Reduced version mapped onto main version. Needed later for simulation.
-Q0 = zeros(255, 8);
+Q0 = zeros(size(s.link_list,1), numel(s.action_state_relation_idx));
 Q0(get_local_state_id(s.link_list), :) = Q0t;
 
 Q1t = Q0t;

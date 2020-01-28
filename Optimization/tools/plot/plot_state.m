@@ -1,10 +1,19 @@
-function plot_state(state)
+function plot_state(state, n)
 % plot_state plots the local state on a grid. It can be used for debugging purposes
 %
 % Mario Coppola, 2018
 
-pp = statespace_grid;
-link = dec2bin(state, 8) - '0';
+if nargin<2
+    n = 8;
+end
+
+if n == 6
+    pp = statespace_hex_grid;
+else
+    pp = statespace_grid;
+end
+
+link = dec2bin(state, n) - '0';
 pp(find(link == 0), :) = []; % Identify neighbor positions
 
 % Plot neighbors

@@ -18,13 +18,10 @@ runtime_ID   = set_runtime_ID(0);
 n = 40;
 script_optimization_pattern_phase1 % Script Phase 1
 
-%% Evolve Phase 2
+%% Evolve
 fprintf('\n---- GA optimization ----\n');
 % Clear variables that we don't need
 clearvars -except runtime_ID pattern_name datafolder Q0 Q1 Q0t Q1t fitness0 sml n
-generations_max = 1000; % Generations of GA
-population.size = 20; % Genome population size
+generations_max = 20; % Generations of GA
+population.size = 10; % Genome population size
 script_optimization_pattern_phase2 % Script Phase 2
-
-%% Evaluation
-script_quick_evaluation_pattern % Script evaluation
