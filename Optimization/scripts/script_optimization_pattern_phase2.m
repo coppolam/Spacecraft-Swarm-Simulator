@@ -55,7 +55,7 @@ end
 %% Plot evolution and extract best
 ga_phase2_analyze_history(population_history_p, 2, 'max', pattern_name, runtime_ID);
 Q2t = ga_phase2_get_best(population_history_p, Q1t, 'max', Qidx);
-Q2  = zeros(255,8);
+Q2  = zeros(size(s.link_list));
 Q2(get_local_state_id(s.link_list),:) = Q2t;
 fprintf('Loaded\n')
 

@@ -49,10 +49,6 @@ for i = 1:length(possibleactions)
     newlinks = find(ismember(s_id_orig, newlinks));
  
     tgs1 = [tgs1 newlinks];
-    newlinks
-    if isempty(newlinks)
-        keyboard
-    end
     tgs1r = [tgs1r newlinks(1)];
     action_used = [action_used repmat(action_idx, 1, numel(newlinks))];
     action_used_r(i) = action_idx;

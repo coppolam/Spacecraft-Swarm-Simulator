@@ -17,8 +17,12 @@ tgs1r_a = tgs1;
 
 for i = 1:size(Q, 1)
     [tgs1{i}, ~, tgs1_a{i}, tgs1r_a{i}] = gs1_patternformation(i, Q, s.action_state_relation_idx, s.link_list);
+    %Debug
+%     newfigure(1);plot_state(i,6);hold on; plot_actions(Q(i,:))
+%     for j = 1:numel(tgs1{i})
+%         newfigure(2);plot_state(tgs1{i}(j),6)
+%     end
 end
-keyboard
 [fitness, c] = fitness_pattern_centrality(Q, s, tgs1, tgs1_a, s.tgs2, s.tgs3);
 
 end
