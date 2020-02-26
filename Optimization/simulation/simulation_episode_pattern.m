@@ -59,9 +59,8 @@ while action_steps < inf
             end
         end
     end
- 
     if visualize
-        plot_formation(state_global_n);
+        plot_formation(state_global_n); drawnow
     end
 
     if damn > max_static

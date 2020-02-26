@@ -6,14 +6,16 @@
 %
 % Mario Coppola, 2018
 
-
 %% Initialize
 init;
 
 %% Set up input variables
 fprintf('---- Starting Optimization ----');
 datafolder   = 'data/'; % Where the final data will be stored
-pattern_name = 'hexagon_lattice';
+% pattern_name = 'hexagon_lattice'; %% works with grid_hex
+pattern_name = 'triangle4'; %% works with grid
+%TODO: Add check for relative
+
 runtime_ID   = set_runtime_ID(0);
 n = 40;
 script_optimization_pattern_phase1 % Script Phase 1
@@ -22,6 +24,6 @@ script_optimization_pattern_phase1 % Script Phase 1
 fprintf('\n---- GA optimization ----\n');
 % Clear variables that we don't need
 clearvars -except runtime_ID pattern_name datafolder Q0 Q1 Q0t Q1t fitness0 sml n
-generations_max = 100; % Generations of GA
+generations_max = 2000; % Generations of GA
 population.size = 10; % Genome population size
 script_optimization_pattern_phase2 % Script Phase 2

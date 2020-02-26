@@ -46,8 +46,8 @@ while ~stop_flag
     
     population = ga_phase2_sort_population    (population, fname, 'max');
     population = ga_phase2_select_elite       (population, ga);
-    population = ga_phase2_generate_offspring (population, ga, s, Q1t, Qidx, 'normalize','>1');
-    population = ga_phase2_generate_mutants   (population, ga, s, Q1t, Qidx, 'normalize','>1');
+    population = ga_phase2_generate_offspring (population, ga, s, Q1t, Qidx, 'normalize','all');
+    population = ga_phase2_generate_mutants   (population, ga, s, Q1t, Qidx, 'normalize','all');
     [population_history_p, population] = ga_phase2_save_population(population_history_p,population,generation);
     stop_flag  = ga_stop( generation, ga.generations_max );
 end

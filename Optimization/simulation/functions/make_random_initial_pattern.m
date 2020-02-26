@@ -11,7 +11,7 @@ i = 2;
 while i <= n_agents
     t = 0;
     while true
-        state_global_0(i, :) = state_global_0(i - 1, :) + statespace(randi(8), :);
+        state_global_0(i, :) = state_global_0(randi([1 i-1],1), :) + statespace(randi(size(statespace,1)), :);
         if size(unique(state_global_0(1:i, :), 'rows'), 1) == i
             break;
         else

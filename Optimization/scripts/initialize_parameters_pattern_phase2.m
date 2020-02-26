@@ -1,6 +1,6 @@
 function [ga, s] = initialize_parameters_pattern_phase2(pattern_name, generations_max, n)
 
-s.action_state_relation_idx = 1:6;  % Actions are 1:8 for full action space in grid world
+s.action_state_relation_idx = 1:size(statespace_grid,1);  % Actions are 1:8 for full action space in grid world
 
 % GA Parameters
 ga.fitness_function = @fitness_pattern_phase2; % Fitness function handle

@@ -12,20 +12,37 @@ function L = hexagon_lattice()
 % Mario Coppola, 2018
 
 
-s{1} = [1 3 5]
-s{2} = [2 6 4]
+% shape
+c = 1;
+s{c  } = [1 3];
+s{c+1} = [2 4];
+s{c+2} = [3 5];
+s{c+3} = [4 6];
+s{c+4} = [5 1];
+s{c+5} = [6 2];
 
-s{3} = [2 4]
-s{4} = [3 5]
-s{5} = [1 3]
-s{6} = [4 6]
-s{7} = [2 6]
-s{8} = [1 5]
+L0 = zeros(numel(s),6)
 
-L = zeros(numel(s),6)
-
-for i = 1:size(L,1)
-	L(i,s{i}) = 1;
+for i = 1:size(L0,1)
+	L0(i,s{i}) = 1;
 end
 
+% semides, includes lattice
+set = permn([0 1],3);
+stickin = [1 0 1];
+
+% 1:4 semides
+for c = 1:4
+L1 = [set(:,1:s{c}(1)-1), repmat(stickin,size(set,1),1), set(:,s{c}(1):end)];
+end
+
+% 5 SEMIDES
+L2 = [ones(size(set,1),1) set fliplr(repmat(stickin(2:end),size(set,1),1))];
+% 6 SEMIDES
+L3 = [repmat(stickin(2:end),size(set,1),1), set ones(size(set,1),1)];
+
+L = [L0;L1;L2;L3];
+
+% remove duplicates
+L = unique(L,'rows')
 end

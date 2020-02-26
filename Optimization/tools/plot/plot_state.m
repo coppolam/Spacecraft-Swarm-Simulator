@@ -7,11 +7,7 @@ if nargin<2
     n = 8;
 end
 
-if n == 6
-    pp = statespace_hex_grid;
-else
-    pp = statespace_grid;
-end
+pp = statespace_grid;
 
 link = dec2bin(state, n) - '0';
 pp(find(link == 0), :) = []; % Identify neighbor positions

@@ -2,7 +2,7 @@ function [s, Q0] = initialize_parameters_pattern_phase1(pattern_name, n)
 
 % States parameters
 linkset_des = feval(pattern_name);  % Desired states
-s.action_state_relation_idx = 1:6;  % Actions are 1:8 for full action space in grid world
+s.action_state_relation_idx = 1:size(statespace_grid,1);  % Actions are 1:8 for full action space in grid world
 s.n_agents = n;
 % Build the state action map
 [Q0, s.des, ~, ~, s.link_list] = init_policy_pattern (...

@@ -23,7 +23,8 @@ color = {[0 0 0],[1 0 0],[0 0.5 0],[0 0 1],[1 0.5 0],[0.75, 0, 0.75]};
 linestyle = {'-','--',':','-.'};
 n_agents_vect = 50;
 
-i = 4643;
+% i = 6974;
+i = 7788;
 evo_p = cell(n,1);
 % for i = 1:n
     fprintf('Reading log %d \n',i);
@@ -32,9 +33,9 @@ evo_p = cell(n,1);
 fprintf('Done reading\n')
 
 %% Plot evolutions
-newfigure(600,'',['evo_p_',pattern_name]);
-ga_analyze_history(evo_p(1,:),'max',color);
-legend('1:1:1','Location','NorthOutside','Orientation','Horizontal');
+% newfigure(600,'',['evo_p_',pattern_name]);
+% ga_analyze_history(evo_p(1,:),'max',color);
+% legend('1:1:1','Location','NorthOutside','Orientation','Horizontal');
 
 %% Evaluate final controllers
 if evaluate

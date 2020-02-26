@@ -10,10 +10,10 @@ possibledirections = find(l == 0);
 % Delete actions that cause separation
 del = [];
 for i = 1:length(possibledirections)
-    statespace_local = statespace_hex_grid;
+    statespace_local = statespace_grid;
     statespace_local(l == 0, :) = []; % leave only neighbors
  
-    actionspace = statespace_hex_grid; % Actionspace = statespacel
+    actionspace = statespace_grid; % Actionspace = statespacel
     newarrangement = [statespace_local; actionspace(possibledirections(i), :)];
  
     % Check if one agent is left alone
@@ -22,12 +22,12 @@ for i = 1:length(possibledirections)
     p = cell(1,size(newarrangement, 1));
     for j = 1:size(newarrangement, 1)
         disttoothers = newarrangement-newarrangement(j,:);
-        if ~any(ismember(statespace_hex_grid,disttoothers,'row'))
+        if ~any(ismember(statespace_grid,disttoothers,'row'))
             del = [del i]; % agent left alone
             flag = 1;
             break;
         else
-            connected{j} = find(ismember(disttoothers,statespace_hex_grid,'row'));
+            connected{j} = find(ismember(disttoothers,statespace_grid,'row'));
             p{j} = j*ones(numel(connected{j}),1);
         end
     end
