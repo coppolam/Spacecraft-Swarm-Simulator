@@ -4,7 +4,7 @@
 % Function            : Load Options
 % Programing Language : MatLab R2018a 
 % Project             : MSc. Thesis
-% Copyright           : Andrés Ripoll Sánchez
+% Copyright           : Andrï¿½s Ripoll Sï¿½nchez
 % Year                : 2019
 %
 %--------------------------------------------------------------------------
@@ -25,29 +25,29 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
 
     % Pattern Used  HEXACE_7  HEXTRI_3 SHEXNC_6 SSQUAR_4 ATVXZ__3 SSQUAR_4
     %     TriaYZ_4  LineInfi TriaYZ_9
-    SSlo_csPattern = 'SHEXNC_6';
+    SSlo_csPattern = 'TriaYZ_4';
                           
     % State/Movement Shape (4 Characters) (Squa, Cube, Hexa)
-    SSlo_csMovShape = 'Hexa';
+    SSlo_csMovShape = 'Squa';
     
     % Use Extreme Scale Patterns
     SSlo_lUseExtremeScale = true;
 
     % Use Optimized PFSM
-    SSlo_lUseOptimziedPFSM = false;
+    SSlo_lUseOptimziedPFSM = true;
     
     % Use PreLoaded PFSM
     SSlo_lUsePreLoadedPFSM = false;
     
     % Name of the Optimized Matrix
-    SSlo_csOptMat = 'Qopt_triangle4_ANTS2018';%'Q_triangle9_ALT4';%
+    SSlo_csOptMat = 'Qopt_triangle4_ANTS2018'; %'Qopt_triangle4_ANTS2018';%'Q_triangle9_ALT4';%
 
 % Simulation Time Related
 
-    % Maximum Time Allowed.
-      SSlo_rMaxTime = 3110400; %s
+    % Maximum Time Allowed
+      SSlo_rMaxTime = 500; %s
     
-    % Time Step  
+    % Time Step
       SSlo_rTimeStep = 20; %s
 
     % Frequency of the (Low Level) Controller
