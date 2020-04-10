@@ -31,21 +31,21 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
     SSlo_csMovShape = 'Squa';
     
     % Use Extreme Scale Patterns
-    SSlo_lUseExtremeScale = true;
+    SSlo_lUseExtremeScale = false;
 
     % Use Optimized PFSM
     SSlo_lUseOptimziedPFSM = true;
     
     % Use PreLoaded PFSM
-    SSlo_lUsePreLoadedPFSM = false;
+    SSlo_lUsePreLoadedPFSM = true;
     
     % Name of the Optimized Matrix
-    SSlo_csOptMat = 'Qopt_triangle4_ANTS2018'; %'Qopt_triangle4_ANTS2018';%'Q_triangle9_ALT4';%
+    SSlo_csOptMat = 'triangle4_SI_pagerank_optimized_E4' %'Qopt_triangle4_ANTS2018';%'Q_triangle9_ALT4';%
 
 % Simulation Time Related
 
     % Maximum Time Allowed
-      SSlo_rMaxTime = 500; %s
+      SSlo_rMaxTime = 3110400; %s
     
     % Time Step
       SSlo_rTimeStep = 20; %s
@@ -80,5 +80,5 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
       SSlo_lRealTime = false;
       
     % Real Time Plot (Rel)
-      SSlo_lRealTimeLocal = false;
+      SSlo_lRealTimeLocal = true;
       

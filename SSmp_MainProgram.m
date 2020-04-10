@@ -4,7 +4,7 @@
 % Function            : Main Program
 % Programing Language : MatLab R2018a 
 % Project             : MSc. Thesis
-% Copyright           : Andrés Ripoll Sánchez
+% Copyright           : Andrï¿½s Ripoll Sï¿½nchez
 % Year                : 2019
 %
 %--------------------------------------------------------------------------
@@ -143,7 +143,7 @@ rTimer = 1;
                 CheckLocalState(SSlo_csPattern);
         
         end
-    
+        
         if all(SSmp_SwarmStatus) && ~lConverged
 
             disp('Convergence Achieved in ' +                           ...
