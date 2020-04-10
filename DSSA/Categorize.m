@@ -4,7 +4,7 @@
 % Function            : Categorize 
 % Programing Language : MatLab R2018a 
 % Project             : MSc. Thesis
-% Copyright           : Andrés Ripoll Sánchez
+% Copyright           : Andrï¿½s Ripoll Sï¿½nchez
 % Year                : 2019
 %
 %--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ function Categorize(oAgent)
                 1 ) .* size( oAgent.oState.arState,2 )
             
             oAgent.lActive = false;
-            
+            oAgent.lStuck = true;
         % Check if the Agent is in a desired state
         elseif oAgent.CheckLocalState(SSlo_csPattern)
            

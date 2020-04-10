@@ -4,7 +4,7 @@
 % Function            : PFSM
 % Programing Language : MatLab R2018a 
 % Project             : MSc. Thesis
-% Copyright           : Andrés Ripoll Sánchez
+% Copyright           : Andrï¿½s Ripoll Sï¿½nchez
 % Year                : 2019
 %
 %--------------------------------------------------------------------------
@@ -63,7 +63,7 @@ function DSpf_arAction = PFSM(oAgent)
         if isempty(arMoveMat)
             
             oAgent.lActive = false;
-            
+            oAgent.lStuck = true;
             % Does not matter to define the maneuver, as it will be
             % discarted by the low level controller since this agent is not
             % moving

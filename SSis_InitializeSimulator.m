@@ -29,13 +29,13 @@
 % So far 6 digit precision is considered more than enough for the
 % calculations done in this program. Less than these might cause problems
 % in the translation of the states from 1 and 0s to spherical and cartesian
-  SSis_iOperationPrec = 6;
+  SSis_iOperationPrec = 4;
   
   % Radius of knowledge and movement
   SSis_rKnowledgeRadius = 450;%810;%29;%15;%790;%790;%150;%7.9%m
   SSis_rMovementRadius  = 300;%20;%10;%500;%5;%100;%m
 
-  SSis_iNumAgents = 4;
+  SSis_iNumAgents = 10;
   
   % ------------Load Agent Design
   

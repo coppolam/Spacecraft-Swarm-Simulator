@@ -4,7 +4,7 @@
 % Function            : Agent Class Definition
 % Programing Language : MatLab R2018a 
 % Project             : MSc. Thesis
-% Copyright           : Andrés Ripoll Sánchez
+% Copyright           : Andrï¿½s Ripoll Sï¿½nchez
 % Year                : 2019
 %
 %--------------------------------------------------------------------------
@@ -61,6 +61,8 @@ classdef agent < handle & matlab.mixin.SetGet
        arTarget
        % Status Flag: Active = 1 or Blocked = 0
        lActive
+       % Status Flag for being stuck 
+       lStuck
        % Thrust Used
        rTotalDeltaV
    end
@@ -134,6 +136,7 @@ classdef agent < handle & matlab.mixin.SetGet
             % Extra Initializations
             obj.rKnowledgeRadius = SSis_rKnowledgeRadius;
             obj.lActive   = false;
+            obj.lStuck    = false;
             obj.lPriority = false;
             obj.rTotalDeltaV = 0;
 
@@ -156,11 +159,16 @@ classdef agent < handle & matlab.mixin.SetGet
             %                         matches the desired state.
             %
             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-           if ~thisagent.lActive
+           if ~thisagent.lActive 
                 status = CheckState(thisagent.oState.arState,csPattern);
            else
                status = false;
            end
+           global SSlo_StaticEqualsDesired
+           if SSlo_StaticEqualsDesired && thisagent.lStuck
+               status = true;
+           end
+
        end
               
        function [t,y] = propagateorbit (thisagent, rDeltaT, rTimeStep,  ...

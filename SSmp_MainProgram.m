@@ -22,7 +22,8 @@
 global SSmp_rTime SSlo_rTimeStep SSlo_lDebug SSlo_rMaxTime              ...
     SSlo_lRealTime SSlo_lRealTimeLocal SSis_iNumAgents SSmp_lEnd        ...
     SSmp_arError SSmp_arErrorVel SSmp_iIterationNumber                  ...
-    SSlo_arStateTolerance SSlo_arStationTolerance SSlo_rDSSAFrequency
+    SSlo_arStateTolerance SSlo_arStationTolerance SSlo_rDSSAFrequency   ...
+    SSlo_StaticEqualsDesired
 
 % Initialize Needed Variables
 SSmp_rTime = 0;
@@ -136,9 +137,8 @@ rTimer = 1;
                 Velocity' - SSis_arAgents(iLoop2).arTarget(4:6);
              
         end
-        
-        for iLoop2 = 1:SSis_iNumAgents
-        
+
+        for iLoop2 = 1:SSis_iNumAgents       
             SSmp_SwarmStatus(iLoop2) = SSis_arAgents(iLoop2).           ...
                 CheckLocalState(SSlo_csPattern);
         

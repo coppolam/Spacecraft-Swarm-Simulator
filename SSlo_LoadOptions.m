@@ -19,13 +19,13 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
     SSlo_rSafetyLimit SSlo_arStationTolerance SSlo_csPattern SSlo_lLog  ...
     SSlo_lDebug SSlo_lRealTime SSlo_lRealTimeLocal SSlo_arStateTolerance...
     SSlo_rTimeStep SSlo_csMovShape SSlo_lUseOptimziedPFSM SSlo_csOptMat ...
-    SSlo_lUsePreLoadedPFSM SSlo_lUseExtremeScale
+    SSlo_lUsePreLoadedPFSM SSlo_lUseExtremeScale SSlo_StaticEqualsDesired
 
 % Main Options
 
     % Pattern Used  HEXACE_7  HEXTRI_3 SHEXNC_6 SSQUAR_4 ATVXZ__3 SSQUAR_4
     %     TriaYZ_4  LineInfi TriaYZ_9
-    SSlo_csPattern = 'TriaYZ_4';
+    SSlo_csPattern = 'TwoMates';
                           
     % State/Movement Shape (4 Characters) (Squa, Cube, Hexa)
     SSlo_csMovShape = 'Squa';
@@ -34,10 +34,13 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
     SSlo_lUseExtremeScale = false;
 
     % Use Optimized PFSM
-    SSlo_lUseOptimziedPFSM = true;
+    SSlo_lUseOptimziedPFSM = false;
     
     % Use PreLoaded PFSM
-    SSlo_lUsePreLoadedPFSM = true;
+    SSlo_lUsePreLoadedPFSM = false;
+
+    % Be lenient on desired states
+    SSlo_StaticEqualsDesired = true;
     
     % Name of the Optimized Matrix
     SSlo_csOptMat = 'triangle4_SI_pagerank_optimized_E4' %'Qopt_triangle4_ANTS2018';%'Q_triangle9_ALT4';%
@@ -80,5 +83,5 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
       SSlo_lRealTime = false;
       
     % Real Time Plot (Rel)
-      SSlo_lRealTimeLocal = false;
+      SSlo_lRealTimeLocal = true;
       
