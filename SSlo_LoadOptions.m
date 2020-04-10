@@ -71,7 +71,7 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
 % Output Options
 
     % Generate Log
-      SSlo_lLog = true;
+      SSlo_lLog = false;
       
     % Debug Mode
       SSlo_lDebug = false;

@@ -14,7 +14,7 @@
 %
 %--------------------------------------------------------------------------
 
-clear all
+clearvars -except experiment_number
 close all
 clc
 
@@ -28,7 +28,7 @@ SSis_InitializeSimulator
 SSmp_MainProgram
 
 % Show Results
-SSpt_Plotting
+% SSpt_Plotting
 
 % Beep when the Simulation has ended
 beep

@@ -1,7 +1,7 @@
-%% batch run
+%% Batch run
 
-for experiment = 1:100
+for experiment_number = 1:2
     SwarmSimulator
-    filename = sprintf("result_%d",experiment);
+    filename = sprintf("data/result_%d",experiment_number);
     save(filename)
 end
