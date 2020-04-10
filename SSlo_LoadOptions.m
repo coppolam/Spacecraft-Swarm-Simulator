@@ -71,7 +71,7 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
 % Output Options
 
     % Generate Log
-      SSlo_lLog = false;
+      SSlo_lLog = true;
       
     % Debug Mode
       SSlo_lDebug = false;
@@ -80,5 +80,5 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
       SSlo_lRealTime = false;
       
     % Real Time Plot (Rel)
-      SSlo_lRealTimeLocal = true;
+      SSlo_lRealTimeLocal = false;
       

@@ -4,7 +4,7 @@
 % Function            : Swarm Simulator
 % Programing Language : MatLab R2018a 
 % Project             : MSc. Thesis
-% Copyright           : Andrés Ripoll Sánchez
+% Copyright           : Andrï¿½s Ripoll Sï¿½nchez
 % Year                : 2019
 %
 %--------------------------------------------------------------------------
