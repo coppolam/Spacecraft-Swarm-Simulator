@@ -121,7 +121,7 @@ function lStatus = CheckState( arLocalState, sGlobalPattern)
       elseif sGlobalPattern == '333Mates'
           
           
-        % This mode referes to all states where there are two agents as
+        % This mode referes to all states where there are three agents as
         % neighbours.
         if sum(sum(arLocalState))  == 3
             
@@ -132,7 +132,7 @@ function lStatus = CheckState( arLocalState, sGlobalPattern)
       elseif sGlobalPattern == '444Mates'
           
           
-        % This mode referes to all states where there are two agents as
+        % This mode referes to all states where there are four agents as
         % neighbours.
         if sum(sum(arLocalState))  == 4
             

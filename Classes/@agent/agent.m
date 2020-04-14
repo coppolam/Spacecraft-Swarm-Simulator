@@ -165,6 +165,7 @@ classdef agent < handle & matlab.mixin.SetGet
                status = false;
            end
            global SSlo_StaticEqualsDesired
+           
            if SSlo_StaticEqualsDesired && thisagent.lStuck
                status = true;
            end
