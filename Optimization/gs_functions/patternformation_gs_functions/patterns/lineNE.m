@@ -14,7 +14,7 @@ function L = lineNE
 % Mario Coppola, 2018
 
 L = zeros(3, 8);
-p = 2;
+p = 1;
 L(1, p) = 1;
 L(2, p + 4) = 1;
 L(3, [p, p + 4]) = 1;

@@ -35,7 +35,7 @@
   SSis_rKnowledgeRadius = 450;%810;%29;%15;%790;%790;%150;%7.9%m
   SSis_rMovementRadius  = 300;%20;%10;%500;%5;%100;%m
 
-  SSis_iNumAgents = 3;
+  SSis_iNumAgents = 5;
   
   % ------------Load Agent Design
   
@@ -139,6 +139,7 @@ SSri_RandomInitialization(SSis_arAgents)
         addpath('./DSSA/OptiMove/')      
         load( strcat('./DSSA/OptiMove/', SSlo_csOptMat) )
         clear SSlo_csOptMat 
+%         Qopt(sum(Qopt,2)>0,:) = Qopt(sum(Qopt,2)>0,:)./sum(Qopt(sum(Qopt,2)>0,:),2);
         SSis_arLoadedPFSM = Qopt;
         clear Qopt
     end

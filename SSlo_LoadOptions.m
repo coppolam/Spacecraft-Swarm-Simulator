@@ -25,10 +25,10 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
 
     % Pattern Used  HEXACE_7  HEXTRI_3 SHEXNC_6 SSQUAR_4 ATVXZ__3 SSQUAR_4
     %     TriaYZ_4  LineInfi TriaYZ_9
-    SSlo_csPattern = 'HEXTRI_3';
+    SSlo_csPattern = 'LineInfi';
                           
     % State/Movement Shape (4 Characters) (Squa, Cube, Hexa)
-    SSlo_csMovShape = 'Hexa';
+    SSlo_csMovShape = 'Squa';
     
     % Use Extreme Scale Patterns
     SSlo_lUseExtremeScale = false;
@@ -43,7 +43,7 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
     SSlo_StaticEqualsDesired = false;
     
     % Name of the Optimized Matrix
-    SSlo_csOptMat = 'triangle4_SI_pagerank_optimized_E4' %'Qopt_triangle4_ANTS2018';%'Q_triangle9_ALT4';%
+    SSlo_csOptMat = 'lineN_SI_pagerank_optimized' %'Qopt_triangle4_ANTS2018';%'Q_triangle9_ALT4';%
 
 % Simulation Time Related
 

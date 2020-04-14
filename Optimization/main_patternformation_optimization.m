@@ -13,7 +13,7 @@ init;
 fprintf('---- Starting Optimization ----');
 datafolder   = 'data/'; % Where the final data will be stored
 % pattern_name = 'hexagon_lattice'; %% works with grid_hex
-pattern_name = 'triangle4'; %% works with grid
+pattern_name = 'lineNE'; %% works with grid
 %TODO: Add check for relative
 
 runtime_ID   = set_runtime_ID(0);
