@@ -19,17 +19,23 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
     SSlo_rSafetyLimit SSlo_arStationTolerance SSlo_csPattern SSlo_lLog  ...
     SSlo_lDebug SSlo_lRealTime SSlo_lRealTimeLocal SSlo_arStateTolerance...
     SSlo_rTimeStep SSlo_csMovShape SSlo_lUseOptimziedPFSM SSlo_csOptMat ...
-    SSlo_lUsePreLoadedPFSM SSlo_lUseExtremeScale SSlo_StaticEqualsDesired
+    SSlo_lUsePreLoadedPFSM SSlo_lUseExtremeScale SSlo_StaticEqualsDesired ...
+    SSis_iNumAgents
 
 % Main Options
 
     % Pattern Used  HEXACE_7  HEXTRI_3 SHEXNC_6 SSQUAR_4 ATVXZ__3 SSQUAR_4
     %     TriaYZ_4  LineInfi TriaYZ_9
-    SSlo_csPattern = 'LineInfi';
-                          
+    % Ruledbased patterns: 'TwoMates, '333Mates, 444Mates'
+
+    SSlo_csPattern = 'TwoMates';
+
     % State/Movement Shape (4 Characters) (Squa, Cube, Hexa)
     SSlo_csMovShape = 'Squa';
-    
+
+    % Number of satellites
+    SSis_iNumAgents = 20;
+
     % Use Extreme Scale Patterns
     SSlo_lUseExtremeScale = false;
 
@@ -40,10 +46,10 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
     SSlo_lUsePreLoadedPFSM = false;
 
     % Be lenient on desired states
-    SSlo_StaticEqualsDesired = false;
+    SSlo_StaticEqualsDesired = true;
     
     % Name of the Optimized Matrix
-    SSlo_csOptMat = 'lineN_SI_pagerank_optimized' %'Qopt_triangle4_ANTS2018';%'Q_triangle9_ALT4';%
+    SSlo_csOptMat = 'Qopt_lineN_pagerank_optimized'; %'Qopt_triangle4_ANTS2018';%'Q_triangle9_ALT4';%
 
 % Simulation Time Related
 
@@ -83,5 +89,5 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
       SSlo_lRealTime = false;
       
     % Real Time Plot (Rel)
-      SSlo_lRealTimeLocal = false;
+      SSlo_lRealTimeLocal = true; % best
       

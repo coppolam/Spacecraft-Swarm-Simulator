@@ -34,8 +34,6 @@
   % Radius of knowledge and movement
   SSis_rKnowledgeRadius = 450;%810;%29;%15;%790;%790;%150;%7.9%m
   SSis_rMovementRadius  = 300;%20;%10;%500;%5;%100;%m
-
-  SSis_iNumAgents = 5;
   
   % ------------Load Agent Design
   
