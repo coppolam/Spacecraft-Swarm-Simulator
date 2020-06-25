@@ -4,7 +4,7 @@
 % Function            : Generate Desired States
 % Programing Language : MatLab R2018a 
 % Project             : MSc. Thesis
-% Copyright           : Andrés Ripoll Sánchez
+% Copyright           : Andrï¿½s Ripoll Sï¿½nchez
 % Year                : 2019
 %
 %--------------------------------------------------------------------------
@@ -479,18 +479,18 @@ function GenerateDesiredStates(sGlobalPattern)
         
         % Left End
             % Az: 0 El: 0
-            DSgd_arDesiredStates(1,1,1) = 1;
+            DSgd_arDesiredStates(1,3,1) = 1;
             
         % Right End
             % Az: 180 El: 0
-            DSgd_arDesiredStates(1,5,2) = 1;  
+            DSgd_arDesiredStates(1,7,2) = 1;  
         
         % Midle Element
             % Az: 0 El: 0
-            DSgd_arDesiredStates(1,1,3) = 1;
+            DSgd_arDesiredStates(1,3,3) = 1;
             
             %Az: 180 El: 0
-            DSgd_arDesiredStates(1,5,3) = 1;
+            DSgd_arDesiredStates(1,7,3) = 1;
             
     % Triangle 3        
     elseif sGlobalPattern == 'TriVXZ_3'

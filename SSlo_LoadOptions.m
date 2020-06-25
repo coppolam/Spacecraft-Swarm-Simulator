@@ -28,22 +28,22 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
     %     TriaYZ_4  LineInfi TriaYZ_9
     % Ruledbased patterns: 'TwoMates, '333Mates, 444Mates'
 
-    SSlo_csPattern = 'TwoMates';
+    SSlo_csPattern = 'LineInfi';
 
     % State/Movement Shape (4 Characters) (Squa, Cube, Hexa)
     SSlo_csMovShape = 'Squa';
 
     % Number of satellites
-    SSis_iNumAgents = 20;
+    SSis_iNumAgents = 10;
 
     % Use Extreme Scale Patterns
     SSlo_lUseExtremeScale = false;
 
     % Use Optimized PFSM
-    SSlo_lUseOptimziedPFSM = false;
+    SSlo_lUseOptimziedPFSM = true;
     
     % Use PreLoaded PFSM
-    SSlo_lUsePreLoadedPFSM = false;
+    SSlo_lUsePreLoadedPFSM = true;
 
     % Be lenient on desired states
     SSlo_StaticEqualsDesired = true;
@@ -89,5 +89,5 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
       SSlo_lRealTime = false;
       
     % Real Time Plot (Rel)
-      SSlo_lRealTimeLocal = true; % best
+      SSlo_lRealTimeLocal = false; % best
       
