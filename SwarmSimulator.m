@@ -9,7 +9,7 @@
 %
 %--------------------------------------------------------------------------
 %
-% Synopsis : This script contains, on a really high level, the whole
+% Synopsis : This script contains, on a reall5y high level, the whole
 %            simulator flow down.
 %
 %--------------------------------------------------------------------------

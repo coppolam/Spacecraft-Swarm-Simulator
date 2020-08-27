@@ -28,7 +28,7 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
     %     TriaYZ_4  LineInfi TriaYZ_9
     % Ruledbased patterns: 'TwoMates, '333Mates, 444Mates'
 
-    SSlo_csPattern = 'LineInfi';
+    SSlo_csPattern = "LineInfi_alongtrack";
 
     % State/Movement Shape (4 Characters) (Squa, Cube, Hexa)
     SSlo_csMovShape = 'Squa';
@@ -46,10 +46,10 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
     SSlo_lUsePreLoadedPFSM = true;
 
     % Be lenient on desired states
-    SSlo_StaticEqualsDesired = true;
+    SSlo_StaticEqualsDesired = false;
     
     % Name of the Optimized Matrix
-    SSlo_csOptMat = 'Qopt_lineN_pagerank_optimized'; %'Qopt_triangle4_ANTS2018';%'Q_triangle9_ALT4';%
+    SSlo_csOptMat = 'Qopt_lineE_pagerank_optimized'; %'Qopt_triangle4_ANTS2018';%'Q_triangle9_ALT4';%
 
 % Simulation Time Related
 
@@ -89,5 +89,5 @@ global SSlo_rMaxTime SSlo_rControlFreq SSlo_rDSSAFrequency              ...
       SSlo_lRealTime = false;
       
     % Real Time Plot (Rel)
-      SSlo_lRealTimeLocal = false; % best
+      SSlo_lRealTimeLocal = true; % best
       
